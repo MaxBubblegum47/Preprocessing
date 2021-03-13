@@ -17,7 +17,7 @@ from nltk.stem import LancasterStemmer
 from nltk.stem.wordnet import WordNetLemmatizer
 
 list_file=[]
-list_file = [(root, files) for root, dirs, files in os.walk("/home/lorenzo/Scrivania/Progetto Gestione dell'Informazione/Lyrics") if files]
+list_file = [(root, files) for root, dirs, files in os.walk("/home/lorenzo/Scrivania/Progetto Gestione dell'Informazione/Lyrics") if files] #set here the path of the directory of all your songs (if it contains other subdir no problem)
 list_file.sort()
 
 
@@ -28,9 +28,12 @@ for path, files in list_file:
         print(canzoni)
         righe = file.read()
         words = righe.split()
+        
+        #still some random test
         lemmatizer = WordNetLemmatizer()
         ps = LancasterStemmer()
 
+        #we're gonnna use that
         lmtzr = WordNetLemmatizer()
 
         for parole in words:
