@@ -39,17 +39,17 @@ for path, files in list_file:
             words = line.split()
             for r in words:
                 if not r in stop_words:
-                    appendFile = open('filteredtext.txt','a')
+                    appendFile = open('filteredtext.txt','a') #this is the buffer
                     appendFile.write(" "+str(r))
                     appendFile.close()
 
-            with open("/Users/lorenzostigliano/Desktop/Progetto Gestione dell'Informazione/filteredtext.txt", "r") as f:
+            with open("/Users/lorenzostigliano/Desktop/Progetto Gestione dell'Informazione/filteredtext.txt", "r") as f: #here we are opening the buffer and overwrite the song 
                 with open(path + "/" + canzoni, "w") as f1:
                     for line in f:
                         f1.write(line)
 
             import os
-            os.remove("/Users/lorenzostigliano/Desktop/Progetto Gestione dell'Informazione/filteredtext.txt")
+            os.remove("/Users/lorenzostigliano/Desktop/Progetto Gestione dell'Informazione/filteredtext.txt") #we remove the buffer, we will not use it anymore
 
             #LOWER CASE,PUNTEGGIATURA, LEMMATIZING, STEMMING
             #lines = [line.lower() for line in f] OK
