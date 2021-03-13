@@ -16,13 +16,15 @@ import nltk
 from nltk.stem import LancasterStemmer
 from nltk.stem.wordnet import WordNetLemmatizer
 
-file = open("/Users/lorenzostigliano/Desktop/teststem/Paradise_Coldplay.txt","r")
+file = open("/Users/lorenzostigliano/Desktop/teststem/Paradise_Coldplay.txt","r") #put here the path of your song for testing the remove stopword functionality
 righe = file.read()
 words = righe.split()
+
+#that's some bullshit test
 lemmatizer = WordNetLemmatizer()
 ps = LancasterStemmer()
 
-#solo questo funziona tutta la roba sopra è bullshit
+#this is the right one that we're gonna use for real
 lmtzr = WordNetLemmatizer()
 
 for parole in words:
@@ -38,6 +40,3 @@ with open("/Users/lorenzostigliano/Desktop/Progetto Gestione dell'Informazione/f
 
 import os
 os.remove("/Users/lorenzostigliano/Desktop/Progetto Gestione dell'Informazione/filteredtext.txt")
-
-'''a questo punto manca solamente da mettere appunto un metodo property
-per far stemming di tutti i verbi e poi anche delle parole'''
