@@ -21,7 +21,7 @@ import nltk
 nltk.download('stopwords')
 
 list_file=[]
-list_file = [(root, files) for root, dirs, files in os.walk("/Users/lorenzostigliano/Desktop/Lyrics") if files]
+list_file = [(root, files) for root, dirs, files in os.walk("/Users/lorenzostigliano/Desktop/Lyrics") if files] #change the path with the one within you got all your .txt file
 list_file.sort()
 
 
